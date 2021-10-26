@@ -1,9 +1,11 @@
 - hosts: all
+  collections:
+   - redhat.insights
   tasks:
   - name: Ensure Insights is installed
     yum:
       name: insight
       state: present
   - name: Ensure that Insights client is registered to Satellite or cloud.redhat.com
-    insights_register:
+    insights.insights_register:
       state: present
