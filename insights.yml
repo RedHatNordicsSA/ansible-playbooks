@@ -7,5 +7,5 @@
       name: insight
       state: present
   - name: Ensure that Insights client is registered to Satellite or cloud.redhat.com
-    insights.insights_register:
+    insights_register:
       state: present
